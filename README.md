@@ -9,4 +9,4 @@ Rather than pulling down binary dependencies from a package manager and extracti
 This has the downside of a (potentially very long) deploy time for the first push, with the benefit of a less-fragile build product that's somewhat less likely to break due to platform and dependency shifts. Or at least, that's the hope!
 
 ## Stack compatibility
-This buildpack is tested primarily against the `cedar-14` stack. Currently, a workaround is required to make it work on the newer `cedar-16` stack - see https://github.com/ello/heroku-buildpack-imagemagick/pull/17 for details.
+This buildpack is tested primarily against the `cedar-14` stack. Currently, a workaround is required to make it work on the newer `heroku-16` stack - see https://github.com/ello/heroku-buildpack-imagemagick/pull/17 for details.
