@@ -31,6 +31,7 @@ if [ ! -f $CACHE_FILE ]; then
     exit 1;
   fi
   tar xJf $BUILD_DIR/$IMAGE_MAGICK_FILE | indent
+  rm $BUILD_DIR/$IMAGE_MAGICK_FILE
 
   echo "-----> Building ImageMagick"
   cd $IMAGE_MAGICK_DIR
@@ -47,7 +48,6 @@ if [ ! -f $CACHE_FILE ]; then
   REL_INSTALL_DIR="imagemagick"
   tar czf $REL_INSTALL_DIR.tar.gz $REL_INSTALL_DIR
   mv $REL_INSTALL_DIR.tar.gz $CACHE_FILE
-
 else
   # cache exists, extract it
   echo "-----> Extracting ImageMagick $CACHE_FILE => $VENDOR_DIR"
