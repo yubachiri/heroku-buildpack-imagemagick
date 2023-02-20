@@ -41,6 +41,7 @@ if [ ! -f $CACHE_FILE ]; then
   make -j"$(nproc)" && make install
   cd ..
   rm -rf $IMAGE_MAGICK_DIR
+  rm -rf $INSTALL_DIR/share/doc
 
   # cache for future deploys
   echo "-----> Caching ImageMagick installation"
