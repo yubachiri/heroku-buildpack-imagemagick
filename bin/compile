@@ -30,7 +30,7 @@ if [ ! -f $CACHE_FILE ]; then
     ls $BUILD_DIR | indent
     exit 1;
   fi
-  tar xvf $BUILD_DIR/$IMAGE_MAGICK_FILE | indent
+  tar xJf $BUILD_DIR/$IMAGE_MAGICK_FILE | indent
 
   echo "-----> Building ImageMagick"
   cd $IMAGE_MAGICK_DIR
